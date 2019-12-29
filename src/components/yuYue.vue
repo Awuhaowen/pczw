@@ -205,10 +205,8 @@ export default {
     activity() {
       this.$router.push("activity");
     },
-
+    
     sjxs(i) {
-      console.log(this.list);
-      
       if (i == 0) {
         this.jj = true;
         this.sj = false;

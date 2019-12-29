@@ -1,7 +1,7 @@
 <template>
   <main style="height: 100vh">
     <div class="con">
-      <img src="@/assets/images/logo.png" alt="" />
+      <img src="@/assets/images/logo.png" alt />
 
       <div class="dl">
         <div class="d">
@@ -10,9 +10,7 @@
             :key="i"
             @click="d(i)"
             :class="[i == index ? 'p1' : '']"
-          >
-            {{ item }}
-          </p>
+          >{{ item }}</p>
         </div>
 
         <div v-show="p">
@@ -32,16 +30,12 @@
         <div class="e" v-show="e">
           <div class="p">
             <p>邮箱地址:</p>
-            <el-input v-model="input3" placeholder="请输入手机号"></el-input>
+            <el-input v-model="input3" placeholder="请输入邮箱地址"></el-input>
           </div>
 
           <div class="p">
             <p>密码:</p>
-            <el-input
-              v-model="input4"
-              type="password"
-              placeholder="请输入密码"
-            ></el-input>
+            <el-input v-model="input4" type="password" placeholder="请输入密码"></el-input>
           </div>
           <p @click="dl" class="fh">登录</p>
         </div>
@@ -78,7 +72,7 @@ export default {
         this.e = false;
       } else {
         this.p = false;
-        this.index = i
+        this.index = i;
         this.e = true;
       }
     }

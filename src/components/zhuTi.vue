@@ -1,7 +1,7 @@
 <template>
   <main>
     <my-header></my-header>
-    <img style="width: 100%;" src="@/assets/images/h1.png" alt="" />
+    <img style="width: 100%;" src="@/assets/images/h1.png" alt />
     <div class="head">
       <div>
         <h4>活动主题</h4>
@@ -13,7 +13,7 @@
     <div class="main" v-for="(item, i) in main" :key="i">
       <div class="m">
         <div class="ms" @click="cj">
-          <img :src="item.pic1" alt="" />
+          <img :src="item.pic1" alt />
           <div>
             <h4>{{ item.h4 }}</h4>
             <p>{{ item.p1 }}</p>
@@ -25,7 +25,7 @@
 
         <div class="pf">
           <div>
-            <img :src="item.pic2" alt="" />
+            <img :src="item.pic2" alt />
             <p>{{ item.p4 }}</p>
             <h5>{{ item.h5 }}</h5>
           </div>
@@ -92,12 +92,11 @@ export default {
 .x > p {
   color: #2375ff;
   width: 65px;
-  height: 22px;
   border: 1px dashed #2375ff;
   border-radius: 15px;
   text-align: center;
   cursor: pointer;
-  line-height: 22px;
+  padding: 5px;
 }
 
 .x {
@@ -141,9 +140,8 @@ export default {
   color: #fff;
   background: #007aff;
   width: 54px;
-  height: 23px;
   text-align: center;
-  line-height: 23px;
+  padding: 5px;
   border-radius: 3px;
 }
 

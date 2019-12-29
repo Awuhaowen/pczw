@@ -8,6 +8,8 @@
       <p style="margin: 0 10px">></p>
       <p style="color: #007aff; cursor: pointer;" @click="gr">个人中心</p>
       <p style="margin: 0 10px">></p>
+      <p style="color: #007aff; cursor: pointer;" @click="setting">设置</p>
+      <p style="margin: 0 10px">></p>
       <p>修改密码</p>
     </div>
 
@@ -24,27 +26,15 @@
 
       <div>
         <p>原密码：</p>
-        <el-input
-          placeholder="请输入原密码"
-          v-model="input1"
-          show-password
-        ></el-input>
+        <el-input placeholder="请输入原密码" v-model="input1" show-password></el-input>
       </div>
       <div>
         <p>新密码：</p>
-        <el-input
-          placeholder="请输入新密码"
-          v-model="input2"
-          show-password
-        ></el-input>
+        <el-input placeholder="请输入新密码" v-model="input2" show-password></el-input>
       </div>
       <div>
         <p>确认密码：</p>
-        <el-input
-          placeholder="请确认密码"
-          v-model="input3"
-          show-password
-        ></el-input>
+        <el-input placeholder="请确认密码" v-model="input3" show-password></el-input>
       </div>
       <div class="tj">
         <el-button class="cg" :plain="true" @click="open2">提交</el-button>
@@ -77,6 +67,10 @@ export default {
         message: "提交成功",
         type: "success"
       });
+    },
+
+    setting() {
+      this.$router.push("modify");
     },
 
     gr() {
